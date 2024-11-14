@@ -8,7 +8,6 @@
 / {
     chosen {
         zmk,kscan = &kscan0;
-        zmk,matrix_transform = &default_transform;
         zmk,physical-layout = &default_layout;
     };
 
@@ -30,22 +29,6 @@
 
     kscan0: kscan {
         compatible = "zmk,kscan-gpio-matrix";
-        diode-direction = "col2row";
         wakeup-source;
-
-        col-gpios
-            = <&pro_micro 11 (GPIO_ACTIVE_HIGH)> // COL0
-            , <&pro_micro 10 (GPIO_ACTIVE_HIGH)> // COL1
-            , <&pro_micro 9 (GPIO_ACTIVE_HIGH)> // COL2
-            , <&pro_micro 12 (GPIO_ACTIVE_HIGH)> // COL3
-            , <&pro_micro 13 (GPIO_ACTIVE_HIGH)> // COL4
-            ;
-
-        row-gpios
-            = <&pro_micro 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // ROW0
-            , <&pro_micro 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // ROW1
-            , <&pro_micro 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // ROW2
-            , <&pro_micro 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // ROW3
-            ;
     };
 };
