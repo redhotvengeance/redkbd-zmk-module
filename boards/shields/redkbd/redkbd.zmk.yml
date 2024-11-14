@@ -1,0 +1,13 @@
+file_format: "1"
+id: redkbd
+name: redkbd
+type: shield
+url: https://github.com/redhotvengeance/redkbd/
+requires: [pro_micro]
+exposes: [i2c_oled]
+features:
+  - keys
+  - display
+siblings:
+  - redkbd_left
+  - redkbd_right
