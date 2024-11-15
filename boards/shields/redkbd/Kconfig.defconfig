@@ -6,11 +6,23 @@ config ZMK_KEYBOARD_NAME
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
+config BT_CTLR
+    default BT
+
+config ZMK_BLE
+    default y
+
 endif
 
 if SHIELD_REDKDB_LEFT || SHIELD_REDKDB_RIGHT
 
 config ZMK_SPLIT
+    default y
+
+config BT_CTLR
+    default BT
+
+config ZMK_BLE
     default y
 
 endif
