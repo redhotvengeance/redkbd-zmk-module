@@ -7,44 +7,114 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            // -------------------------------------------------------------------------------------------------------------------------
-            // |     Q     |     W     |     E     |     R     |     T     |     Y     |     U     |     I     |     O     |     P     |
-            // |     A     |     S     |     D     |     F     |     G     |     H     |     J     |     K     |     L     |     ;     |
-            // |     Z     |     X     |     C     |     V     |     B     |     N     |     M     |     ,     |     .     |     /     |
-            //                                     |    DOWN   |    RET    |    SPC    |    UP     |
+            // -----------------------------------------------------------------------------------------------------------------------------------
+            // |     Q      |     W      |     E      |     R      |     T      |     Y      |     U      |     I      |     O      |     P      |
+            // |     A      |     S      |     D      |     F      |     G      |     H      |     J      |     K      |     L      |     ;      |
+            // |     Z      |     X      |     C      |     V      |     B      |     N      |     M      |     ,      |     .      |     /      |
+            //                                        |    ESC     |    RET     |    SPC     |    BSPC    |
             bindings = <
-                &kp Q     &kp W     &kp E     &kp R     &kp T     &kp Y     &kp U     &kp I     &kp O     &kp P
-                &kp A     &kp S     &kp D     &kp F     &kp G     &kp H     &kp J     &kp K     &kp L     &kp SEMI
-                &kp Z     &kp X     &kp C     &kp V     &kp B     &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH
-                                              &mo 1     &kp RET   &kp SPACE &mo 2
+                &kp Q        &kp W        &kp E        &kp R        &kp T        &kp Y        &kp U        &kp I        &kp O        &kp P
+                &mt LGUI A   &mt LALT S   &mt LCTL D   &mt LSHFT F  &kp G        &mt RSHFT H  &mt RCTL J   &mt RALT K   &mt RGUI L   &kp SEMI
+                &lt 6 Z      &kp X        &kp C        &kp V        &kp B        &kp N        &kp M        &kp COMMA    &kp DOT      &lt 6 FSLH
+                                                       &lt 1 ESC    &lt 3 RET    &lt 2 SPC    &lt 5 BSPC
             >;
         };
 
-        lower_layer {
-            // -------------------------------------------------------------------------------------------------------------------------
-            // |    TAB    |           |           |           |           |           |           |           |           |    BSPC   |
-            // |    CTRL   |           |           |           |           |           |           |           |           |           |
-            // |    SHFT   |           |           |           |           |           |           |           |           |           |
-            //                                     |           |    RET    |    SPC    |           |
+        nav_layer {
+            // -----------------------------------------------------------------------------------------------------------------------------------
+            // |    ESC     |            |    PGUP    |    REDO    |            |    PGDN    |    UNDO    |            |            |            |
+            // |   SUPER    |    ALT     |    CTRL    |   SHIFT    |    HOME    |    LEFT    |    DOWN    |     UP     |   RIGHT    |            |
+            // |    TAB     |    CUT     |    COPY    |   PASTE    |    END     |            |            |            |            |            |
+            //                                        |     ▼      |            |    BSPC    |    DEL     |
             bindings = <
-                &kp TAB   &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &kp BSPC
-                &kp LCTRL &trans    &trans    &trans    &trans    &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &trans
-                &kp LSHFT &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans
-                                              &trans    &kp RET   &kp SPACE &trans
+                &kp ESC      &trans       &kp PG_UP    &kp K_REDO   &trans       &kp PG_DN    &kp K_UNDO   &trans       &trans       &trans
+                &kp LGUI     &LALT        &LCTL        &kp LSHFT    &kp HOME     &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &trans
+                &kp TAB      &kp K_CUT    &kp K_COPY   &kp K_PASTE  &kp END      &trans       &trans       &trans       &trans       &trans
+                                                       &trans       &trans       &kp BSPC     &kp DEL
             >;
         };
 
-        raise_layer {
-            // -------------------------------------------------------------------------------------------------------------------------
-            // |           |           |           |           |           |           |     7     |     8     |     9     |     0     |
-            // |           |           |           |           |           |           |     4     |     5     |     6     |           |
-            // |           |           |           |           |           |           |     1     |     2     |     3     |           |
-            //                                     |           |    RET    |    SPC    |           |
+        sym_layer {
+            // -----------------------------------------------------------------------------------------------------------------------------------
+            // |     !      |     @      |     #      |     $      |     %      |     ^      |     &      |     *      |     (      |     )      |
+            // |            |     _      |     +      |     {      |     }      |            |     $      |     %      |     ^      |     '      |
+            // |            |     -      |     =      |     [      |     ]      |            |     !      |     @      |     #      |            |
+            //                                        |     (      |     )      |     ▼      |            |
             bindings = <
-                &bt BT_CLR &trans    &trans    &trans    &trans    &trans    &kp N7    &kp N8    &kp N9    &kp N0
-                &bt BT_SEL 0 &trans    &trans    &trans    &trans    &trans    &kp N4    &kp N5    &kp N6    &trans
-                &bt BT_SEL 1 &trans    &trans    &trans    &trans    &trans    &kp N1    &kp N2    &kp N3    &trans
-                                              &trans    &kp RET   &kp SPACE &trans
+                &kp EXCL     &kp AT       &kp HASH     &kp DLLR     &kp PRCNT    &kp CARET    &kp AMPS     &kp ASTRK    &kp LPAR     &kp RPAR
+                &trans       &kp UNDER    &kp PLUS     &kp LBRC     &kp RBRC     &trans       &kp DLLR     &kp PRCNT    &kp CARET    &kp APOS
+                &trans       &kp MINUS    &kp EQUAL    &kp LBKT     &kp RBKT     &trans       &kp EXCL     &kp AT       &kp HASH     &trans
+                                                       &kp LPAR     &kp RPAR     &trans       &trans
+            >;
+        };
+
+        num_layer {
+            // -----------------------------------------------------------------------------------------------------------------------------------
+            // |     1      |     2      |     3      |     4      |     5      |     6      |     7      |     8      |     9      |     0      |
+            // |            |            |            |            |            |            |     4      |     5      |     6      |            |
+            // |            |            |            |            |            |            |     1      |     2      |     3      |            |
+            //                                        |            |     ▼      |            |            |
+            bindings = <
+                &kp N1       &kp N2       &kp N3       &kp N4       &kp N5       &kp N6       &kp N7       &kp N8       &kp N9       &kp N0
+                &trans       &trans       &trans       &trans       &trans       &trans       &kp N4       &kp N5       &kp N6       &trans
+                &trans       &trans       &trans       &trans       &trans       &trans       &kp N1       &kp N2       &kp N3       &trans
+                                                       &trans       &trans       &trans       &trans
+            >;
+        };
+
+        fun_layer {
+            // -----------------------------------------------------------------------------------------------------------------------------------
+            // |     F1     |     F2     |     F3     |     F4     |     F5     |     F6     |     F7     |     F8     |     F9     |     F10    |
+            // |            |            |            |            |            |            |     F4     |     F5     |     F6     |     F11    |
+            // |            |            |            |            |            |            |     F1     |     F2     |     F3     |     F12    |
+            //                                        |            |     ▼      |     ▼      |            |
+            bindings = <
+                &kp F1       &kp F2       &kp F3       &kp F4       &kp F5       &kp F6       &kp F7       &kp F8       &kp F9       &kp F10
+                &trans       &trans       &trans       &trans       &trans       &trans       &kp F4       &kp F5       &kp F6       &kp F11
+                &trans       &trans       &trans       &trans       &trans       &trans       &kp F1       &kp F2       &kp F3       &kp F12
+                                                       &trans       &trans       &trans       &trans
+            >;
+        };
+
+        med_layer {
+            // -----------------------------------------------------------------------------------------------------------------------------------
+            // |            |            |            |            |            |            |            |            |            |            |
+            // |            |            |            |            |            |    MUTE    |   VOL UP   |   BRI UP   |            |            |
+            // |            |            |            |            |            |   PY/PA    |   VOL DN   |   BRI DN   |            |            |
+            //                                        |            |            |            |     ▼      |
+            bindings = <
+                &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans
+                &trans       &trans       &trans       &trans       &trans       &kp C_MUTE   &kp C_VOL_UP &kp C_BRI_UP &trans       &trans
+                &trans       &trans       &trans       &trans       &trans       &kp C_PP     &kp C_VOL_DN &kp C_BRI_DN &trans       &trans
+                                                       &trans       &trans       &trans       &trans
+            >;
+        };
+
+        mo_layer {
+            // -----------------------------------------------------------------------------------------------------------------------------------
+            // |            |            |            |    REDO    |            |            |    UNDO    |            |            |            |
+            // |   SUPER    |    ALT     |    CTRL    |   SHIFT    |            |            |   SHIFT    |    CTRL    |    ALT     |   SUPER    |
+            // |     ▼      |    CUT     |    COPY    |   PASTE    |   MIDDLE   |   MIDDLE   |            |            |            |     ▼      |
+            //                                        |    LEFT    |   RIGHT    |    LEFT    |   RIGHT    |
+            bindings = <
+                &trans       &trans       &trans       &kp K_REDO   &trans       &trans       &kp K_UNDO   &trans       &trans       &trans
+                &kp LGUI     &LALT        &LCTL        &kp LSHFT    &trans       &trans       &kp RSHFT    &kp RCTL     &kp RALT     &kp RGUI
+                &trans       &kp K_CUT    &kp K_COPY   &kp K_PASTE  &mkp MCLK    &mkp MCLK    &trans       &trans       &trans       &trans
+                                                       &mkp LCLK    &mkp RCLK    &mkp LCLK    &mkp RCLK
+            >;
+        };
+
+        bt_layer {
+            // -----------------------------------------------------------------------------------------------------------------------------------
+            // |            |            |            |            |            |            |            |            |            |            |
+            // |    BT1     |    BT2     |    BT3     |    BT4     |    BT5     |            |            |            |            |            |
+            // |            |            |            |            |            |            |            |            |            |            |
+            //                                        |     ▼      |            |            |     ▼      |
+            bindings = <
+                &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans
+                &BT_SEL 0    &BT_SEL 1    &BT_SEL 2    &BT_SEL 3    &BT_SEL 4    &trans       &trans       &trans       &trans       &trans
+                &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans
+                                                       &trans       &trans       &trans       &trans
             >;
         };
     };
