@@ -28,7 +28,7 @@
             //                                        |     ▼      |            |    BSPC    |    DEL     |
             bindings = <
                 &kp ESC      &trans       &kp PG_UP    &kp K_REDO   &trans       &kp PG_DN    &kp K_UNDO   &trans       &trans       &trans
-                &kp LGUI     &LALT        &LCTL        &kp LSHFT    &kp HOME     &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &trans
+                &kp LGUI     &kp LALT     &kp LCTL     &kp LSHFT    &kp HOME     &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &trans
                 &kp TAB      &kp K_CUT    &kp K_COPY   &kp K_PASTE  &kp END      &trans       &trans       &trans       &trans       &trans
                                                        &trans       &trans       &kp BSPC     &kp DEL
             >;
@@ -98,7 +98,7 @@
             //                                        |    LEFT    |   RIGHT    |    LEFT    |   RIGHT    |
             bindings = <
                 &trans       &trans       &trans       &kp K_REDO   &trans       &trans       &kp K_UNDO   &trans       &trans       &trans
-                &kp LGUI     &LALT        &LCTL        &kp LSHFT    &trans       &trans       &kp RSHFT    &kp RCTL     &kp RALT     &kp RGUI
+                &kp LGUI     &kp LALT     &kp LCTL     &kp LSHFT    &trans       &trans       &kp RSHFT    &kp RCTL     &kp RALT     &kp RGUI
                 &trans       &kp K_CUT    &kp K_COPY   &kp K_PASTE  &mkp MCLK    &mkp MCLK    &trans       &trans       &trans       &trans
                                                        &mkp LCLK    &mkp RCLK    &mkp LCLK    &mkp RCLK
             >;
