@@ -113,7 +113,7 @@
             //                                        |     ▼      |            |            |     ▼      |
             bindings = <
                 &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans
-                &BT_SEL 0    &BT_SEL 1    &BT_SEL 2    &BT_SEL 3    &BT_SEL 4    &trans       &trans       &trans       &trans       &trans
+                &BT_SEL 1    &BT_SEL 2    &BT_SEL 3    &BT_SEL 4    &BT_SEL 5    &trans       &trans       &trans       &trans       &trans
                 &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans
                                                        &trans       &trans       &trans       &trans
             >;
