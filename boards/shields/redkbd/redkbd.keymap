@@ -15,7 +15,7 @@
             //                                        |    ESC     |    RET     |    SPC     |    BSPC    |
             bindings = <
                 &kp Q        &kp W        &kp E        &kp R        &kp T        &kp Y        &kp U        &kp I        &kp O        &kp P
-                &mt LGUI A   &mt LALT S   &mt LCTL D   &mt LSHFT F  &kp G        &mt RSHFT H  &mt RCTL J   &mt RALT K   &mt RGUI L   &kp SEMI
+                &mt LGUI A   &mt LALT S   &mt LCTL D   &mt LSHFT F  &kp G        &kp H        &mt RSHFT J  &mt RCTL K   &mt RALT L   &mt RGUI SEMI
                 &lt 6 Z      &kp X        &kp C        &kp V        &kp B        &kp N        &kp M        &kp COMMA    &kp DOT      &lt 6 FSLH
                                                        &lt 1 ESC    &lt 3 RET    &lt 2 SPC    &lt 5 BSPC
             >;
