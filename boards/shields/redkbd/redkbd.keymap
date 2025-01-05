@@ -108,12 +108,12 @@
         bt_layer {
             // -----------------------------------------------------------------------------------------------------------------------------------
             // |            |            |            |            |            |            |            |            |            |            |
-            // |    BT1     |    BT2     |    BT3     |    BT4     |    BT5     |            |            |            |            |            |
+            // |    BT1     |    BT2     |            |            |            |            |            |            |            |            |
             // |            |            |            |            |            |            |            |            |            |            |
             //                                        |     ▼      |            |            |     ▼      |
             bindings = <
                 &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans
-                &BT_SEL 1    &BT_SEL 2    &BT_SEL 3    &BT_SEL 4    &BT_SEL 5    &trans       &trans       &trans       &trans       &trans
+                &BT_SEL 0    &BT_SEL 1    &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans
                 &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans
                                                        &trans       &trans       &trans       &trans
             >;
